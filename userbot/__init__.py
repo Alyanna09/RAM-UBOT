@@ -57,7 +57,7 @@ ENABLE_KILLME = True
 
 
 # Bot Logs setup:
-CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
+CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "True"))
 
 logging.basicConfig(
     format="[%(name)s] - [%(levelname)s] - %(message)s",
@@ -78,7 +78,7 @@ if version_info[0] < 3 or version_info[1] < 8:
 # Check if the config was edited by using the already used variable.
 # Basically, its the 'virginity check' for the config file ;)
 CONFIG_CHECK = os.environ.get(
-    "___________PLOX_______REMOVE_____THIS_____LINE__________", None)
+    "", None)
 
 if CONFIG_CHECK:
     LOGS.info(
@@ -87,52 +87,52 @@ if CONFIG_CHECK:
     quit(1)
 
 # Telegram App KEY and HASH
-API_KEY = os.environ.get("API_KEY", "")
-API_HASH = os.environ.get("API_HASH", "")
+API_KEY = os.environ.get("API_KEY", "1017456")
+API_HASH = os.environ.get("API_HASH", "f448445cc8d75a13d5ff0c591d0bfc9e")
 
 # Userbot Session String
-STRING_SESSION = os.environ.get("STRING_SESSION", "")
+STRING_SESSION = os.environ.get("STRING_SESSION", "1BVtsOGUBu5ZmoxmMJXBpTTrMgy4d44T7Z0PMEzquvAr9Jo_6B19aL_rQVEz8jtgUSpvIp9eM9ptEgrztMmtTd5oRiRTWjr1HMf1nbWFIF6dQDzCJDeEbo-Bkkj0KO5A5DDH1mJMEDvbOtKwQ0NkQ3z3bvv5Sr-EOD7fCUV8-NykmvqilQ4sxcztdOPDrmCVPsMnOaw3KukJP50ZDlv93EK0yJxi5QStNbAZNJoR6jBV956ujV2XuFXNdA19zVsDvHjTcQb36g8s_WYqWpuqsoJN2AURV43N-1Cih5wWUx6x3SW8T7GcwxBkI-9XFRpcFWPQDva_mVTBFRbaxinhH2O3CiEyxn5I=")
 
 # Logging channel/group ID configuration.
-BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID", ""))
+BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID", "-1001152497946"))
 
 # Userbot logging feature switch.
 BOTLOG = sb(os.environ.get("BOTLOG", "True"))
 LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
 
 # Bleep Blop, this is a bot ;)
-PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
+PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "True"))
 
 LMT_PM = int(os.environ.get("LMT_PM", 5))
 
 # Send .chatid in any group with all your administration bots (added)
-G_BAN_LOGGER_GROUP = os.environ.get("G_BAN_LOGGER_GROUP", "")
+G_BAN_LOGGER_GROUP = os.environ.get("G_BAN_LOGGER_GROUP", "-1001152497946")
 if G_BAN_LOGGER_GROUP:
     G_BAN_LOGGER_GROUP = int(G_BAN_LOGGER_GROUP)
 
 # Heroku Credentials for updater.
-HEROKU_MEMEZ = sb(os.environ.get("HEROKU_MEMEZ", "False"))
-HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", "")
-HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "")
+HEROKU_MEMEZ = sb(os.environ.get("HEROKU_MEMEZ", "True"))
+HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", "apalahgitu")
+HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "419d4012-ef66-492b-b22b-b33a81047aa6")
 
 # JustWatch Country
 WATCH_COUNTRY = os.environ.get("WATCH_COUNTRY", "ID")
 
 # Github Credentials for updater and Gitupload.
-GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
-GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
+GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", "ANGIN")
+GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", "a3b4ed2fffe5a7d531f97c87030547dd7d88b107")
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/ramadhani892/DEVEL")
+    "https://github.com/Alyanna09/DEVEL")
 
 # sudo
 SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "").split()}
 BL_CHAT = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
 
 #handler
-CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
+CMD_HANDLER = os.environ.get("CMD_HANDLER") or ","
 
 SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"$")
 
@@ -142,21 +142,21 @@ if not BLACKLIST_CHAT:
     BLACKLIST_CHAT = [-1001692751821, -1001459812644]
 
 # only developer
-OWNDEV = os.environ.get("OWNDEV", None)
+OWNDEV = os.environ.get("OWNDEV", "829363192")
 if not OWNDEV:
     OWNDEV = [1826643972, 1720836764]
 
 # Console verbose logging
-CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
+CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "True"))
 
 # SQL Database URI
 DB_URI = os.environ.get("DATABASE_URL", None)
 
 # OCR API key
-OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
+OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", "0e8b1ceb9088957")
 
 # remove.bg API key
-REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
+REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", "pW7nF93521exnbVoS8rRxcNa")
 
 # Redis URI & Redis Password
 REDIS_URI = os.environ.get('REDIS_URI', None)
@@ -215,7 +215,7 @@ RAM_TEKS_KOSTUM = os.environ.get("RAM_TEKS_KOSTUM") or "ㅤ"
 REPO_NAME = os.environ.get("REPO_NAME") or "⭐𝗥𝗔𝗠-𝗨𝗕𝗢𝗧⭐"
 
 # Default botlog
-BOTLOG_MSG = os.environ.get("BOTLOG_MSG") or f"```💢 RAM - UBOT DAH AKTIF KONTOL!!! 💢```"
+BOTLOG_MSG = os.environ.get("BOTLOG_MSG") or f"```💢 RAM - UBOT DAH AKTIF YAA!!! 💢```"
 
 
 # Devg For gesss
@@ -245,7 +245,7 @@ DEVS = [
 # Blacklist User for use RAM-UBOT
 while 0 < 6:
     _BLACKLIST = get(
-        "https://raw.githubusercontent.com/ramadhani892/Ramblack/master/ramblacklist.json"
+        "https://raw.githubusercontent.com/Alyanna09/Ramblack/master/ramblacklist.json"
     )
     if _BLACKLIST.status_code != 200:
         if 0 != 5:
@@ -258,7 +258,7 @@ while 0 < 6:
 del _BLACKLIST
 
 # Default .alive Name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "Ram-ubot")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "𝔪𝔞𝔰 𝔱𝔲𝔯 || ᴬⁿᵍⁱⁿᵇᵃʳᵃᵗ ✓ ✨")
 
 # Time & Date - Country and Time Zone
 COUNTRY = str(os.environ.get("COUNTRY", "ID"))
@@ -274,13 +274,13 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "RAM-UBOT")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "ANGIN-UBOT")
 
 # Bot Version
 BOT_VER = os.environ.get("BOT_VER", "9.2.3")
 
 # Default .alive Username
-ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME", None)
+ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME", "hanyafatur")
 
 # Sticker Custom Pack Name
 S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
@@ -291,13 +291,13 @@ ALIVE_LOGO = os.environ.get(
 
 # Default .helpme logo
 HELP_LOGO = os.environ.get(
-   "HELP_LOGO") or "https://telegra.ph/file/5daa73aa6d1afbd1da353.jpg"
+   "HELP_LOGO") or "https://telegra.ph/file/b133bd73286c174eec9db.jpg"
 
 # Default .alive Instagram
-IG_ALIVE = os.environ.get("IG_ALIVE") or "instagram.com/ramadh20"
+IG_ALIVE = os.environ.get("IG_ALIVE") or "instagram.com/fatur_patue"
 
 # Default emoji help
-EMOJI_HELP = os.environ.get("EMOJI_HELP") or "💫"
+EMOJI_HELP = os.environ.get("EMOJI_HELP") or "‽"
 
 INLINE_PIC = (
     os.environ.get("INLINE_PIC") or "https://telegra.ph/file/9dc4e335feaaf6a214818.jpg"
@@ -315,23 +315,23 @@ QUEUE_PIC = (
 
 # Default .alive Group
 GROUP_LINK = os.environ.get(
-    "GROUP_LINK") or "t.me/geezsupport"
+    "GROUP_LINK") or "t.me/cartemanhidop"
 
 # Default .repo Bot
 OWNER_BOT = os.environ.get(
-    "OWNER_BOT") or "t.me/teervigroup"
+    "OWNER_BOT") or "t.me/cartemanhidop"
 
 # CH sfs bot
-CH_SFS = os.environ.get("CH_SFS") or "t.me/userbotCh"
+CH_SFS = os.environ.get("CH_SFS") or "t.me/caritemanhidupofficial"
 
 # Last.fm Module
-BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
-DEFAULT_BIO = os.environ.get("DEFAULT_BIO") or "⭐𝗥𝗔𝗠-𝗨𝗕𝗢𝗧⭐"
+BIO_PREFIX = os.environ.get("BIO_PREFIX", "Listening To")
+DEFAULT_BIO = os.environ.get("DEFAULT_BIO") or "⭐騒々しい⭐"
 
-LASTFM_API = os.environ.get("LASTFM_API", None)
-LASTFM_SECRET = os.environ.get("LASTFM_SECRET", None)
-LASTFM_USERNAME = os.environ.get("LASTFM_USERNAME", None)
-LASTFM_PASSWORD_PLAIN = os.environ.get("LASTFM_PASSWORD", None)
+LASTFM_API = os.environ.get("LASTFM_API", "daf3d511ebaf8c56453e186d8228b562")
+LASTFM_SECRET = os.environ.get("LASTFM_SECRET", "6ec34a41819983c34550379704ac7efd")
+LASTFM_USERNAME = os.environ.get("LASTFM_USERNAME", "hanyafatur09")
+LASTFM_PASSWORD_PLAIN = os.environ.get("LASTFM_PASSWORD", "Faturpatue09}")
 LASTFM_PASS = md5(LASTFM_PASSWORD_PLAIN)
 if LASTFM_API and LASTFM_SECRET and LASTFM_USERNAME and LASTFM_PASS:
     lastfm = LastFMNetwork(api_key=LASTFM_API,
@@ -357,7 +357,7 @@ if G_PHOTOS_AUTH_TOKEN_ID:
     G_PHOTOS_AUTH_TOKEN_ID = int(G_PHOTOS_AUTH_TOKEN_ID)
 
 # Genius Lyrics  API
-GENIUS = os.environ.get("GENIUS_ACCESS_TOKEN", None)
+GENIUS = os.environ.get("GENIUS_ACCESS_TOKEN", "6rqsvJZ03RcthqJwa0zUyqr")
 
 # IMG Stuff
 IMG_LIMIT = os.environ.get("IMG_LIMIT") or None
@@ -367,15 +367,15 @@ CMD_HELP = {}
 QUOTES_API_TOKEN = os.environ.get("QUOTES_API_TOKEN", None)
 
 # Deezloader
-DEEZER_ARL_TOKEN = os.environ.get("DEEZER_ARL_TOKEN", None)
+DEEZER_ARL_TOKEN = os.environ.get("DEEZER_ARL_TOKEN", "fe820e32c9bd6cbb0e3d808668a1afaf6de276c129d8143304fc1b8a8d45eaa1586d1c6d4dc81a30f28682a96e1fc6a3f0a81ddfc51a3ec7d7873d0cd23b56e43d74694e4cc1e83e62b2e280cd5a18b9916ae5fee2eefe7ab827b87cd7735fce")
 
 # Photo Chat - Get this value from http://antiddos.systems
 API_TOKEN = os.environ.get("API_TOKEN", None)
 API_URL = os.environ.get("API_URL", "http://antiddos.systems")
 
 # Inline bot helper
-BOT_TOKEN = os.environ.get("BOT_TOKEN") or None
-BOT_USERNAME = os.environ.get("BOT_USERNAME") or None
+BOT_TOKEN = os.environ.get("BOT_TOKEN") or "1341737902:AAE9SDYxXhRO8SO0Gon6X47llz0gmiddqD8"
+BOT_USERNAME = os.environ.get("BOT_USERNAME") or "Yaoyao23333_bot"
 
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
 # and giving them correct perms to work properly.
@@ -569,9 +569,9 @@ with bot:
             text = (
                 f"**Hey**, __I am using__  **RAM-UBOT** \n\n"
                 f"       __Thanks For Using me__\n\n"
-                f" **Group Support :** [RAM UBOT](t.me/Ramsupportt)\n"
-                f" **Owner Repo :** [Merdhani](t.me/merdhni)\n"
-                f" **Repo :** [KLIK NGENTOT](https://github.com/ramadhani892/RAM-UBOT)\n"
+                f" **Group Support :** [RAM UBOT](t.me/cartemanhidop)\n"
+                f" **Owner Repo :** [𝔪𝔞𝔰 𝔱𝔲𝔯 || ᴬⁿᵍⁱⁿᵇᵃʳᵃᵗ ✓ ✨](t.me/hanyafatur)\n"
+                f" **Repo :** [KLIK NGENTOT](https://github.com/Alyanna09/RAM-UBOT)\n"
             )
             await tgbot.send_file(
                 event.chat_id,
@@ -581,15 +581,15 @@ with bot:
                     [
                         custom.Button.url(
                             text="REPO RAM-UBOT",
-                            url="https://github.com/ramadhani892/RAM-UBOT",
+                            url="https://github.com/Alyanna09/RAM-UBOT",
                         )
                     ],
                     [
                         custom.Button.url(
-                            text="GROUP", url="https://t.me/Ramsupportt"
+                            text="GROUP", url="https://t.me/cartemanhidop"
                         ),
                         custom.Button.url(
-                            text="CHANNEL", url="https://t.me/userbotch/9"
+                            text="CHANNEL", url="https://t.me/caritemanhidupofficial"
                         )
                     ],
                 ],
@@ -605,7 +605,7 @@ with bot:
                 result = builder.photo(
                     file=ramlogo,
                     link_preview=False,
-                    text=f"**Inline In RAM-UBOT**\n\n✴️ **Owner** [merdhani](t.me/merdhni)\n**Jumlah** `{len(dugmeler)}` Modules",
+                    text=f"**Inline In RAM-UBOT**\n\n✴️ **Owner** [hanyafatur](t.me/hanyafatur)\n**Jumlah** `{len(dugmeler)}` Modules",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
@@ -613,7 +613,7 @@ with bot:
                     title="Repository",
                     description="Repository RAM-UBOT",
                     url="https://t.me/ramsupportt",
-                    text="**✨ RAM - UBOT ✨**\n➖➖➖➖➖➖➖➖➖➖\n**Owner :** [Merdhani](https://t.me/merdhni)\n✨ **Support :** @UserbotCh\n**Repository :** [RAM - UBOT](https://github.com/ramadhani892/RAM-UBOT)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**✨ RAM - UBOT ✨**\n➖➖➖➖➖➖➖➖➖➖\n**Owner :** [Hanyafatur](https://t.me/hanyafatur)\n✨ **Support :** @UserbotCh\n**Repository :** [RAM - UBOT](https://github.com/Alyanna09/RAM-UBOT)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/Ramsupportt"),
@@ -629,7 +629,7 @@ with bot:
                     title="RAM-UBOT",
                     description="RAM-UBOT | Telethon",
                     url="https://t.me/ramsupportt",
-                    text=f"**✨ RAM - UBOT ✨**\n➖➖➖➖➖➖➖➖➖➖\n**Owner :** [Merdhani](https://t.me/merdhni)\n✨ **Support :** @UserbotCh\n**Repository :** [RAM - UBOT](https://github.com/ramadhani892/RAM-UBOT)\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**✨ RAM - UBOT ✨**\n➖➖➖➖➖➖➖➖➖➖\n**Owner :** [Merdhani](https://t.me/merdhni)\n✨ **Support :** @UserbotCh\n**Repository :** [RAM - UBOT](https://github.com/Alyanna09/RAM-UBOT)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/Ramsupportt"),
